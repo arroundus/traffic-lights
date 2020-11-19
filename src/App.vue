@@ -1,9 +1,15 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/red">RED</router-link>
-      <router-link to="/yellow">YELLOW</router-link>
-      <router-link to="/green">GREEN</router-link>
+      <div class="links">
+        <router-link to="/red">RED</router-link>
+      </div>
+      <div class="links">
+        <router-link to="/yellow">YELLOW</router-link>
+      </div>
+      <div class="links">
+        <router-link to="/green">GREEN</router-link>
+      </div>
     </div>
     <router-view/>
   </div>
@@ -22,12 +28,23 @@
   color: #2c3e50;
 }
 
+body {
+  background-color: #181A1B;
+}
+
+.links {
+  margin-left: 5px;
+}
+
 #nav {
   padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: rgb(174, 194, 211);
 
     &.router-link-exact-active {
       color: #42b983;

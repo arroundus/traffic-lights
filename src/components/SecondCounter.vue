@@ -38,4 +38,8 @@ export default {
 
 <style scoped>
 
+h2 {
+  color: rgb(174, 194, 211);
+}
+
 </style>
